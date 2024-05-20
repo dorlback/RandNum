@@ -43,26 +43,30 @@ export default function Home() {
         자동 숫자 생성
       </nav>
       <div className="w-full flex-1 bg-slate-400 flex justify-center items-center">
-        <div className="w-2/3 h-2/3 bg-white rounded-md shadow-lg overflow-hidden p-24">
-          <div className="flex items-center space-x-2">
-            <p>줄수:</p>
-            <input
-              value={howHum}
-              onChange={(e) => {
-                setHowNum(e.target.value);
-              }}
-              type="number"
-              className="border border-gray-400 w-14"
-            ></input>
-            최대 숫자:
-            <input
-              value={howmutch}
-              onChange={(e) => {
-                setHowMutch(e.target.value);
-              }}
-              type="number"
-              className="border border-gray-400 w-14"
-            ></input>
+        <div className="w-2/3 h-2/3 bg-white rounded-md shadow-lg overflow-hidden p-4 md:p-24">
+          <div className="flex flex-col md:flex-row items-start md:items-center space-x-2">
+            <div className="flex items-center">
+              <p>줄수:</p>
+              <input
+                value={howHum}
+                onChange={(e) => {
+                  setHowNum(e.target.value);
+                }}
+                type="number"
+                className="border border-gray-400 w-14"
+              ></input>
+            </div>
+            <div className="flex items-center">
+              최대 숫자:
+              <input
+                value={howmutch}
+                onChange={(e) => {
+                  setHowMutch(e.target.value);
+                }}
+                type="number"
+                className="border border-gray-400 w-14"
+              ></input>
+            </div>
             <button
               className="bg-blue-400 text-white px-2 py-1 rounded-md my-4"
               onClick={() => {
